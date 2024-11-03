@@ -9,36 +9,13 @@ import myImg from "../../assets/avatar.jpg";
 
 function Home2() {
   return (
-    <Container className="home-about-section" id="about" px={0}>
+    <Container className="home-skills-section" id="skills" px={0}>
       <Container>
         <Grid >
-          <Grid.Col span={8} className="home-about-description">
-            <Title order={1} style={{ fontSize: "2.6em", marginBottom: "1rem" }}>
+          <Grid.Col span={8} className="home-skills-description">
+            <Title order={1} style={{ fontSize: "2.6em", marginBottom: "1rem", paddingTop:"200px"}}>
               LET ME <span style={{ color: "dodgerblue" }}> INTRODUCE </span> MYSELF
             </Title>
-            <Text className="home-about-body" size="lg" align="left">
-                I fell in love with the world of <strong>web and software development</strong> and I have at least learnt
-                something, I think… 🤷‍♂️
-              <br />
-              <br />My background is rooted in <strong>full-stack development</strong> with a solid foundation in 
-              <Text component="span" className="blue" weight={500} style={{ fontStyle: "italic" }}>
-                {" "}
-                Python (Django, Django Rest Framework, ...), SQL (PostgreSQL, MySQL), and JavaScript (ReactJS).
-              </Text>
-              <br />
-              <br />
-              My interests lie in <strong>optimizing data flow</strong> and <strong>enhancing interactivity</strong>, 
-              while also exploring <strong>advanced algorithms </strong> to strengthen backend development. 
-              <br />
-              <br />
-              I’m passionate about {" "}
-              <Text component="span" className="blue" weight={500}>
-                API development, database management, and real-time network systems
-              </Text>{" "}
-                as well as mastering every layer of the software stack to build seamless, high-performance applications.
-              <br />
-              <br />
-            </Text>
           </Grid.Col>
           <Grid.Col span={4} className="myAvtar">
             <Tilt>
@@ -46,8 +23,38 @@ function Home2() {
             </Tilt>
           </Grid.Col>
         </Grid>
+        <Text className="home-skills-body" size="lg" align="left">
+              I am <strong className="blue">NGUYEN Le Diem Quynh</strong> from{" "}
+              <strong className="blue">Vietnam.</strong>  I’m currently in my 4th year of engineering at INSA Centre Val de Loire, France.
+              <br />
+              <br />
+              I’d describe myself as <strong className="blue">motivated</strong>,  <strong className="blue">curious</strong>, and <strong className="blue">meticulous</strong> - I love diving into new challenges and learning along the way!
+              <br />
+              <br />
+              I fell in love with the world of <strong className="blue">web and software development</strong> and have gained a strong foundation in <strong className="blue">full-stack development</strong>.
+              My expertise includes
+              <Text component="span" className="blue" weight={500} style={{ fontStyle: "italic" }}>
+                {" "}
+                Python (Django, Django Rest Framework, ...), SQL (PostgreSQL, MySQL), and JavaScript (ReactJS).
+              </Text>
+              <br />
+              <br />
+              My interests lie in <strong className="blue">optimizing data flow</strong> and <strong className="blue">enhancing interactivity</strong>, 
+              while also exploring <strong className="blue">advanced algorithms </strong> to strengthen backend development. 
+              <br />
+              <br />
+              I’m passionate about {" "}
+              <Text component="span" className="blue" weight={500}>
+                <strong>API development </strong>, <strong>database management</strong>, and<strong> real-time network systems</strong>
+              </Text>{" "}
+                as well as mastering every layer of the software stack to build seamless, high-performance applications.
+              <br />
+              <br />
+              Building on the knowledge and skills I’ve gained, I am eager to find an opportunity where I can apply what I’ve learned, continue developing my expertise, 
+              and contribute value in an environment that fosters innovation and effective communication.
+            </Text>
         <Grid>
-          <Grid.Col md={12} className="home-about-social">
+          <Grid.Col md={12} className="home-skills-social">
             <Title order={2} style={{ marginTop: "2rem", marginBottom: "0.5rem" }}>
               FIND ME ON
             </Title>

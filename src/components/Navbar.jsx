@@ -57,7 +57,7 @@ function NavBar() {
 
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", width: "100%" }}>
           <Link to="/" className="d-flex">
-            <Title style={{ margin: 0, color: "#5a93f1", fontSize: "2rem"}} >My Portfolio</Title>
+            <Title style={{ margin: 0, color: "#0197f6", fontSize: "2rem"}} >My Portfolio</Title>
           </Link>
           <Group position="apart" align="center">
             {isMobile ? (
@@ -82,7 +82,7 @@ function NavBar() {
                         </Button>
                         <Button variant="subtle" onClick={toggle}>
                           <AiOutlineUser style={{ marginRight: "8px" }} />
-                          <Link to="/about" style={{ textDecoration: "none", color: "dodgerblue" }}>About</Link>
+                          <Link to="/skills" style={{ textDecoration: "none", color: "dodgerblue" }}>Skills</Link>
                         </Button>
                         <Button variant="subtle" onClick={toggle}>
                           <AiOutlineFundProjectionScreen style={{ marginRight: "8px" }} />
@@ -122,7 +122,7 @@ function NavBar() {
                     Home
                   </Button>
                 </Link>
-                <Link to="/about" style={{ textDecoration: "none"}}>
+                <Link to="/skills" style={{ textDecoration: "none"}}>
                   <Button
                     size="lg"
                     leftSection={<AiOutlineUser style={{ marginRight: "8px" }} />}
@@ -130,7 +130,7 @@ function NavBar() {
                     style={{ fontSize: "1.1rem", padding: "10px 15px", color:"#FFFFFF"}}
                     fullWidth
                   >
-                    About
+                    Skills
                   </Button>
                 </Link>
                 <Link to="/project" style={{ textDecoration: "none"}}>
@@ -157,19 +157,7 @@ function NavBar() {
                   </Button>
                 </Link>
 
-                <a href="your_blog_url" target="_blank" rel="noreferrer" style={{ textDecoration: "none", color: "inherit" }}>
-                  <Button
-                    size="lg"
-                    leftSection={<ImBlog style={{ marginRight: "8px" }} />}
-                    variant="subtle"
-                    style={{ fontSize: "1.1rem", padding: "10px 15px", color: "#FFFFFF" }}
-                    fullWidth
-                  >
-                    Blogs
-                  </Button>
-                </a>
-
-                <a href="your_github_url" target="_blank" rel="noreferrer" style={{ textDecoration: "none", color: "inherit" }}>
+                <a href="https://github.com/nldq092203/Portfolio.git" target="_blank" rel="noreferrer" style={{ textDecoration: "none", color: "inherit" }}>
                   <Button
                     size="lg"
                     leftSection={<CgGitFork style={{ marginRight: "8px" }} />}

@@ -15,7 +15,7 @@ html {
       rgba(12, 10, 22, 0.863)
     );
   
-    --imp-text-color: #5a93f1;
+    --imp-text-color: #0197f6;;
   }
   
   .blue {
@@ -320,32 +320,32 @@ html {
     }
   }
   
-  .home-about-section {
+  .home-skills-section {
     position: relative;
     padding-bottom: 70px !important;
     padding-top: 70px !important;
   }
   
-  .home-about-description {
+  .home-skills-description {
     color: black !important;
     padding-top: 100px !important;
     padding-bottom: 20px !important;
     text-align: center;
   }
   
-  .home-about-body {
+  .home-skills-body {
     padding-top: 50px;
     font-size: 1.2em !important;
     text-align: left;
   }
   
-  .home-about-social {
+  .home-skills-social {
     text-align: center !important;
     padding-top: 25px;
     color: black !important;
   }
   
-  .home-about-social-links {
+  .home-skills-social-links {
     justify-content: center !important;
     padding-top: 15px !important;
     display: inline-block !important;
@@ -449,11 +449,10 @@ html {
   /* --------- */
   .project-section {
     position: relative !important;
-    padding-top: 150px !important;
+    padding-top: 120px !important;
     padding-bottom: 30px !important;
-    background-image: var(--section-background-color) !important;
+    background-color: #242424;
   }
-  
   .project-card {
     padding-top: 50px !important;
     padding-bottom: 50px !important;
@@ -468,7 +467,7 @@ html {
     background-color: transparent !important;
     opacity: 0.9 !important;
     transition: all 0.5s ease 0s !important;
-    height: 100% !important;
+    /* height: 100% !important; */
   }
   .project-card-view:hover {
     transform: scale(1.02) !important;
@@ -543,14 +542,14 @@ html {
   }
   
   /* --------- */
-  /* About */
+  /* Skills */
   /* --------- */
   
-  .about-section {
+  .skills-section {
     position: relative !important;
     padding-top: 150px !important;
     padding-bottom: 30px !important;
-    background-image: var(--section-background-color) !important;
+    background-color: #242424;
     color: white !important;
   }
   
@@ -591,14 +590,14 @@ html {
     background-color: transparent !important;
   }
   
-  .about-activity {
+  .skills-activity {
     list-style: none !important;
     text-align: left !important;
     padding-left: 1px !important;
   }
   
   @media (max-width: 767px) {
-    .about-img {
+    .skills-img {
       padding-top: 0 !important;
     }
   }
