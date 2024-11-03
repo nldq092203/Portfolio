@@ -260,7 +260,7 @@ html {
   .home-section {
     position: relative;
     z-index: -1;
-    background-image: var(--image-gradient), url(./Assets/home-bg.jpg);
+    background-image: var(--image-gradient);
     background-position: top center;
     background-repeat: no-repeat;
     padding-bottom: 100px !important;

@@ -3,7 +3,7 @@ import { Container, Grid, Title, Text, Image } from "@mantine/core";
 import Particle from "../Particle";
 import Github from "./Github";
 import Techstack from "./Techstack";
-// import laptopImg from "../../Assets/skills.png";
+
 
 function Skills() {
   return (
