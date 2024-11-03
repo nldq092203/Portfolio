@@ -2,7 +2,6 @@ import React from 'react';
 import { Container, Paper, Text, SimpleGrid, Button, Box } from '@mantine/core';
 import { FaDocker, FaReact, FaPython, FaGoogle, FaNodeJs } from 'react-icons/fa';
 import { SiDjango, SiPostgresql, SiCelery, SiRedis, SiFirebase, SiTailwindcss, SiPostman, SiPytest } from 'react-icons/si';
-import.meta.env.PUBLIC_URL/Demo.mp4
 import MovienightDescription from './MovienightDescription';
 import MovienightDiagram from './MovienightDiagram';
 
