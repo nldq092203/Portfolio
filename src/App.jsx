@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home/Home";
 import Skills from "./components/Skills/Skills";
 import Projects from "./components/Projects/Projects";
-import MovienightDetail from "./components/Projects/MovieNight/MovieNightDetail";
+import MovienightDetail from "./components/Projects/MovieNight/MovienightDetail";
 import VaukazimutDetail from "./components/Projects/Vaukazimut/VaukazimutDetail";
 import Footer from "./components/Footer";
 import Resume from "./components/Resume/Resume";
