@@ -48,7 +48,6 @@ function ImageViewer({ images }) {
       <p style={{ 
         marginTop: '10px', 
         textAlign: 'center', 
-        color:"white",
         marginRight: '10px', 
         padding: '5px 10px', 
         color: "white", 
