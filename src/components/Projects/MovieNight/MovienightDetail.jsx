@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Paper, Text, SimpleGrid, Button, Box } from '@mantine/core';
 import { FaDocker, FaReact, FaPython, FaGoogle, FaNodeJs } from 'react-icons/fa';
 import { SiDjango, SiPostgresql, SiCelery, SiRedis, SiFirebase, SiTailwindcss, SiPostman, SiPytest } from 'react-icons/si';
-import Movie from '../../../assets/Demo.mp4';
+import.meta.env.PUBLIC_URL/Demo.mp4
 import MovienightDescription from './MovienightDescription';
 import MovienightDiagram from './MovienightDiagram';
 
@@ -37,7 +37,7 @@ function MovienightDetail() {
             boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
           }}
         >
-          <source src={Movie} type="video/mp4" />
+          <source src="/Demo.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
