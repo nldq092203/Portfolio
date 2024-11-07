@@ -31,8 +31,8 @@ function MovienightDiagram() {
 
   const items = [
     { color: '#66c2ff', icon: '🔍', position: { top: '10%', left: '45%' } },
-    { color: '#a569bd', icon: '📅', position: { top: '25%', right: '-30%' } },
-    { color: '#f1c40f', icon: '👤', position: { bottom: '45%', right: '-25%' } },
+    { color: '#a569bd', icon: '📅', position: { top: '25%', right: '-22%' } },
+    { color: '#f1c40f', icon: '👤', position: { bottom: '45%', right: '-27%' } },
     { color: '#ff7675', icon: '⏰', position: { bottom: '30%', left: '45%' } },
     { color: '#55efc4', icon: '🔔', position: { bottom: '45%', left: '-20%' }, lignInverse: true },
     { color: '#6c5ce7', icon: '💬', position: { top: '25%', left: '-20%' }, lignInverse: true },
@@ -43,7 +43,7 @@ function MovienightDiagram() {
       shadow="md"
       radius="md"
       className="project-card-view"
-      style={{ width: 900, height: 750, position: 'relative', padding: '20px' }}
+      style={{ width: 950, height: 750, position: 'relative', padding: '20px' }}
       ref={ref}
     >
       <Text fw={700} align="center" style={{ fontSize: "40px" }}>
@@ -112,6 +112,7 @@ function MovienightDiagram() {
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
+                    flexShrink: 0, // Keep the icon size fixed
                   }}
                 >
                   <Text size="xl">{item.icon}</Text>
