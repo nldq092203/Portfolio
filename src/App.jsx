@@ -14,7 +14,6 @@ import {
   Routes,
   Navigate
 } from "react-router-dom";
-// import ScrollToTop from "./components/ScrollToTop";
 import "./style.css";
 import "./App.css";
 import { MantineProvider } from '@mantine/core';
@@ -34,8 +33,8 @@ function App() {
   return (
     <MantineProvider 
     theme={{
-      fontFamily: 'Ubuntu, sans-serif', // Apply to all text elements
-      headings: { fontFamily: 'Ubuntu, sans-serif' }, // Apply to headings
+      fontFamily: 'Ubuntu, sans-serif', 
+      headings: { fontFamily: 'Ubuntu, sans-serif' }, 
     }}
     withGlobalStyles withNormalizeCSS>
       <Router>
