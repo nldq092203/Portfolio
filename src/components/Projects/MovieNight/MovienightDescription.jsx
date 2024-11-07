@@ -15,130 +15,133 @@ import {
   MdIntegrationInstructions,
 } from 'react-icons/md';
 import TaskItem from './TaskItem';
+import { useTranslation } from 'react-i18next';
 
 function MovienightDescription() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-50px' }); // Trigger when component is in view
+  const isInView = useInView(ref, { once: true, margin: '-50px' });
+  const { t } = useTranslation();
 
   const tasks = [
     {
-      label: 'Database Construction',
+      label: t("movienightDescription.tasks.0.label"),
       icon: <AiOutlineDatabase />,
       action: (
         <ul style={{ listStyleType: 'disc', paddingLeft: '20px', marginTop: '10px' }}>
-          <li>Design and build the database schema using PostgreSQL.</li>
-          <li>Create tables, relationships, and indexes for optimized data access.</li>
-          <li>Ensure data integrity and normalization to maintain efficiency and reliability.</li>
+          {t("movienightDescription.tasks.0.action", { returnObjects: true }).map((item, i) => (
+            <li key={i}>{item}</li>
+          ))}
         </ul>
       ),
     },
     {
-      label: 'Division into Apps',
+      label: t("movienightDescription.tasks.1.label"),
       icon: <AiOutlineAppstore />,
       action: (
         <ul style={{ listStyleType: 'disc', paddingLeft: '20px', marginTop: '10px' }}>
-          <li>Organize the project into modular apps for better code management.</li>
-          <li>Apps include:</li>
+          {t("movienightDescription.tasks.1.action", { returnObjects: true }).map((item, i) => (
+            <li key={i}>{item}</li>
+          ))}
           <ol style={{ listStyleType: 'decimal', paddingLeft: '20px', marginTop: '10px' }}>
-            <li>Auth: User authentication and management.</li>
-            <li>Movie: Handling movie data and interactions.</li>
-            <li>Profile: User customization features.</li>
-            <li>Notification: Managing and sending notifications.</li>
-            <li>Chat: Real-time messaging capabilities.</li>
+            {t("movienightDescription.tasks.1.subActions", { returnObjects: true }).map((item, i) => (
+              <li key={i}>{item}</li>
+            ))}
           </ol>
         </ul>
       ),
     },
     {
-      label: 'Authentication',
+      label: t("movienightDescription.tasks.2.label"),
       icon: <FiKey />,
       action: (
-        <ul>
-          <li>Implement secure authentication using:</li>
+        <p style={{ paddingLeft: '20px', marginTop: '10px' }}>
+          {t("movienightDescription.tasks.2.action")}
           <ol style={{ listStyleType: 'decimal', paddingLeft: '20px', marginTop: '10px' }}>
-            <li>JWT (JSON Web Tokens) for token-based authentication.</li>
-            <li>Google OAuth2 for third-party login options.</li>
+            {t("movienightDescription.tasks.2.subActions", { returnObjects: true }).map((item, i) => (
+              <li key={i}>{item}</li>
+            ))}
           </ol>
-        </ul>
+        </p>
       ),
     },
     {
-      label: 'Movie Management',
+      label: t("movienightDescription.tasks.3.label"),
       icon: <MdMovie />,
       action: (
         <ul style={{ listStyleType: 'disc', paddingLeft: '20px', marginTop: '10px' }}>
-          <li>Integrate the OMDB API to fetch and display movie data.</li>
-          <li>Allow users to search for and view movie details.</li>
-          <li>Use Celery tasks for background processing and data updates.</li>
-          <li>Organize events related to movies (movienight, invitation).</li>
+          {t("movienightDescription.tasks.3.action", { returnObjects: true }).map((item, i) => (
+            <li key={i}>{item}</li>
+          ))}
         </ul>
       ),
     },
     {
-      label: 'Profile',
+      label: t("movienightDescription.tasks.4.label"),
       icon: <AiOutlineUser />,
       action: (
         <ul style={{ listStyleType: 'disc', paddingLeft: '20px', marginTop: '10px' }}>
-          <li>Enable users to customize and manage their profiles.</li>
-          <li>Support updating personal information and avatar.</li>
+          {t("movienightDescription.tasks.4.action", { returnObjects: true }).map((item, i) => (
+            <li key={i}>{item}</li>
+          ))}
         </ul>
       ),
     },
     {
-      label: 'Notifications',
+      label: t("movienightDescription.tasks.5.label"),
       icon: <MdNotifications />,
       action: (
         <ul style={{ listStyleType: 'disc', paddingLeft: '20px', marginTop: '10px' }}>
-          <li>Implement a notification system using Celery for asynchronous tasks.</li>
-          <li>Send scheduled alerts to keep users informed.</li>
+          {t("movienightDescription.tasks.5.action", { returnObjects: true }).map((item, i) => (
+            <li key={i}>{item}</li>
+          ))}
         </ul>
       ),
     },
     {
-      label: 'Chat',
+      label: t("movienightDescription.tasks.6.label"),
       icon: <MdChat />,
       action: (
         <ul style={{ listStyleType: 'disc', paddingLeft: '20px', marginTop: '10px' }}>
-          <li>Develop a real-time chat feature using WebSockets.</li>
-          <li>Integrate Ably for seamless real-time messaging.</li>
-          <li>Use webhooks for event handling and Firebase for file storage and archiving.</li>
+          {t("movienightDescription.tasks.6.action", { returnObjects: true }).map((item, i) => (
+            <li key={i}>{item}</li>
+          ))}
         </ul>
       ),
     },
     {
-      label: 'Testing',
+      label: t("movienightDescription.tasks.7.label"),
       icon: <SiPytest />,
       action: (
         <ul style={{ listStyleType: 'disc', paddingLeft: '20px', marginTop: '10px' }}>
-          <li>Ensure code quality with comprehensive testing using Pytest.</li>
-          <li>Cover unit and integration tests for models, APIs, and integrations.</li>
-          <li>Identify and fix potential issues early to maintain stability.</li>
+          {t("movienightDescription.tasks.7.action", { returnObjects: true }).map((item, i) => (
+            <li key={i}>{item}</li>
+          ))}
         </ul>
       ),
     },
     {
-      label: 'CI/CD',
+      label: t("movienightDescription.tasks.8.label"),
       icon: <MdIntegrationInstructions />,
       action: (
-        <ol style={{ listStyleType: 'decimal', paddingLeft: '20px', marginTop: '10px' }}>
-          <li>Set up continuous integration (CI) with GitHub Actions that runs tests.</li>
-          <li>Use Docker for containerization to streamline development and deployment.</li>
-        </ol>
+        <ul style={{ listStyleType: 'disc', paddingLeft: '20px', marginTop: '10px' }}>
+          {t("movienightDescription.tasks.8.action", { returnObjects: true }).map((item, i) => (
+            <li key={i}>{item}</li>
+          ))}
+        </ul>
       ),
     },
     {
-      label: 'Other Features',
+      label: t("movienightDescription.tasks.9.label"),
       icon: <MdIntegrationInstructions />,
       action: (
-        <ul>
-          <li>Add support for:</li>
+        <p style={{ paddingLeft: '20px', marginTop: '10px' }}>
+          {t("movienightDescription.tasks.9.action")}
           <ol style={{ listStyleType: 'decimal', paddingLeft: '20px', marginTop: '10px' }}>
-            <li>CORS (Cross-Origin Resource Sharing) for secure API access.</li>
-            <li>Request throttling to manage traffic and prevent overuse.</li>
-            <li>SwaggerUI for comprehensive API documentation.</li>
-            <li>TypeScript for better code maintainability and type safety.</li>
+            {t("movienightDescription.tasks.9.subActions", { returnObjects: true }).map((item, i) => (
+              <li key={i}>{item}</li>
+            ))}
           </ol>
-        </ul>
+        </p>
       ),
     },
   ];
@@ -151,7 +154,7 @@ function MovienightDescription() {
         transition={{ duration: 0.5 }}
       >
         <Text size="xl" fw={700} align="center" c="white" style={{ fontSize: "40px", marginBottom: '30px' }}>
-          Project Workflow Path
+          {t("movienightDescription.title")}
         </Text>
       </motion.div>
 
@@ -162,7 +165,7 @@ function MovienightDescription() {
           hidden: {},
           show: {
             transition: {
-              staggerChildren: 0.2, // Stagger animations for child components
+              staggerChildren: 0.2,
             },
           },
         }}
@@ -176,10 +179,7 @@ function MovienightDescription() {
               show: {
                 opacity: 1,
                 y: 0,
-                transition: {
-                  duration: 0.6, // Adjust for smoother animation
-                  ease: [0.25, 0.1, 0.25, 1], // Custom easing for smooth movement
-                },
+                transition: { duration: 0.6, ease: [0.25, 0.1, 0.25, 1] },
               },
             }}
           >

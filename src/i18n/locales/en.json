@@ -1,0 +1,181 @@
+{
+  "navbar": {
+    "title": "My Portfolio",
+    "home": "Home",
+    "skills": "Skills",
+    "projects": "Projects",
+    "resume": "Resume",
+    "github": "GitHub"
+  },
+  "home": {
+    "greeting": "Hi There!",
+    "introduction": "I'm",
+    "name": "Quynh"
+  },
+  "typewriter": {
+    "engineeringStudent": "Engineering Student",
+    "webDeveloper": "Web Developer",
+    "fullStackDeveloper": "Full-stack Developer",
+    "opportunitiesSeeker": "Opportunities Seeker"
+  },
+  "home2": {
+    "title": "LET ME <highlight>INTRODUCE</highlight> MYSELF",
+    "introduction": "I am <strong>NGUYEN Le Diem Quynh</strong> from <strong>Vietnam</strong>. I’m currently in my 4th year of engineering at INSA Centre Val de Loire, France.",
+    "description": "I’d describe myself as <strong>motivated</strong>, <strong>curious</strong>, and <strong>meticulous</strong> - I love diving into new challenges and learning along the way!",
+    "passion": "I fell in love with the world of <strong>web and software development</strong> and have gained a strong foundation in <strong>full-stack development</strong>.",
+    "skills": "My expertise includes <text>Python (Django, Django Rest Framework, ...), SQL (PostgreSQL, MySQL), and JavaScript (ReactJS)</text>.",
+    "interests": "My interests lie in <strong>optimizing data flow</strong> and <strong>enhancing interactivity</strong>, while also exploring <strong>advanced algorithms</strong> to strengthen backend development.",
+    "goals": "I’m passionate about <strong>API development</strong>, <strong>database management</strong>, and <strong>real-time network systems</strong>, as well as mastering every layer of the software stack to build seamless, high-performance applications.",
+    "ambition": "Building on the knowledge and skills I’ve gained, I am eager to find an opportunity where I can apply what I’ve learned, continue developing my expertise, and contribute value in an environment that fosters innovation and effective communication.",
+    "socialTitle": "FIND ME ON",
+    "socialMessage": "Feel free to <highlight>connect</highlight> with me"
+  },
+  "footer": {
+    "developedBy": "Developed by Quynh Nguyen"
+  },
+  "skills": {
+    "title": "What can I do ?",
+    "daysICode": "Day I <highlight>Code</highlight>"
+  },
+  "projects": {
+    "title": "My Recent Works",
+    "subtitle": "Here are a few projects I've worked on recently.",
+    "projectCards": [
+      {
+        "title": "Movie Night",
+        "subtitle": "Personal Project",
+        "description": "A full-stack web application designed as a social platform to simplify organizing movie night events."
+      },
+      {
+        "title": "Vaukazimut",
+        "subtitle": "University Project",
+        "description": "A mobile application designed to support the management and organization of orienteering sports at INSA University."
+      },
+      {
+        "title": "Evolution Game",
+        "subtitle": "University Project",
+        "description": "A simulation of a multiplayer evolution game involves combining elements of strategy, simulation, and real-time or turn-based interaction among players."
+      }
+    ]
+  },
+  "projectCard": {
+    "detail": "Detail"
+  },
+  "movienightDescription": {
+    "title": "Project Workflow Path",
+    "tasks": [
+      {
+        "label": "Database Construction",
+        "action": [
+          "Design and build the database schema using PostgreSQL.",
+          "Create tables, relationships, and indexes for optimized data access.",
+          "Ensure data integrity and normalization to maintain efficiency and reliability."
+        ]
+      },
+      {
+        "label": "Division into Apps",
+        "action": [
+          "Organize the project into modular apps for better code management.",
+          "Apps include:"
+        ],
+        "subActions": [
+          "Auth: User authentication and management.",
+          "Movie: Handling movie data and interactions.",
+          "Profile: User customization features.",
+          "Notification: Managing and sending notifications.",
+          "Chat: Real-time messaging capabilities."
+        ]
+      },
+      {
+        "label": "Authentication",
+        "action": "Implement secure authentication using:",  
+        "subActions": [
+          "JWT (JSON Web Tokens) for token-based authentication.",
+          "Google OAuth2 for third-party login options."
+        ]
+      },
+      {
+        "label": "Movie Management",
+        "action": [
+          "Integrate the OMDB API to fetch and display movie data.",
+          "Allow users to search for and view movie details.",
+          "Use Celery tasks for background processing and data updates.",
+          "Organize events related to movies (movienight, invitation)."
+        ]
+      },
+      {
+        "label": "Profile",
+        "action": [
+          "Enable users to customize and manage their profiles.",
+          "Support updating personal information and avatar."
+        ]
+      },
+      {
+        "label": "Notifications",
+        "action": [
+          "Implement a notification system using Celery for asynchronous tasks.",
+          "Send scheduled alerts to keep users informed."
+        ]
+      },
+      {
+        "label": "Chat",
+        "action": [
+          "Develop a real-time chat feature using WebSockets.",
+          "Integrate Ably for seamless real-time messaging.",
+          "Use webhooks for event handling and Firebase for file storage and archiving."
+        ]
+      },
+      {
+        "label": "Testing",
+        "action": [
+          "Ensure code quality with comprehensive testing using Pytest.",
+          "Cover unit and integration tests for models, APIs, and integrations.",
+          "Identify and fix potential issues early to maintain stability."
+        ]
+      },
+      {
+        "label": "CI/CD",
+        "action": [
+          "Set up continuous integration (CI) with GitHub Actions that runs tests.",
+          "Use Docker for containerization to streamline development and deployment."
+        ]
+      },
+      {
+        "label": "Other Features",
+        "action": "Add support for:",
+        "subActions": [
+          "CORS (Cross-Origin Resource Sharing) for secure API access.",
+          "Request throttling to manage traffic and prevent overuse.",
+          "SwaggerUI for comprehensive API documentation.",
+          "TypeScript for better code maintainability and type safety."
+        ]
+      }
+    ]
+  },
+  "movienightDiagram": {
+    "objective": "Objective",
+    "items": [
+      "Movie Search",
+      "Event Creation",
+      "Profile Management",
+      "Scheduling",
+      "Notifications",
+      "Communication"
+    ]
+  },
+  "movienightDetail": {
+    "techStack": "Tech Stack Used",
+    "viewProject": "View Project"
+  },
+  "vaukazimutDetail":{
+    "techStack":"Tech Stack Used"
+  },
+  "imageViewer": {
+    "previous":"Previous",
+    "next": "Next",
+    "of": "of"
+  },
+  "resume": {
+    "download": "Download CV"
+  }
+}

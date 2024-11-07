@@ -1,17 +1,18 @@
 import React from "react";
-import { Container, Grid, Title, Text, Image } from "@mantine/core";
+import { Container, Title } from "@mantine/core";
 import Particle from "../Particle";
 import Github from "./Github";
 import Techstack from "./Techstack";
-
+import { useTranslation} from "react-i18next";
 
 function Skills() {
+  const { t } = useTranslation();
   return (
     <Container fluid className="skills-section" px={0}>
       <Particle />
       <Container>
         <Title order={1} className="project-heading" style={{ marginTop: "40px", paddingBottom: "20px" }}>
-          What can I do ?
+        {t('skills.title')}
         </Title>
         <Techstack />
 

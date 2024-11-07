@@ -1,13 +1,19 @@
 import React from "react";
 import GitHubCalendar from "react-github-calendar";
 import { Container, Title, Text, Group } from "@mantine/core";
+import { Trans } from 'react-i18next';
 
 function Github() {
   return (
     <Container fluid style={{ paddingBottom: "10px" }}>
       <Group position="center">
         <Title order={1} style={{ paddingBottom: "20px", textAlign: "center" }}>
-          Days I <Text component="span" className="blue" inherit weight={700}>Code</Text>
+          <Trans
+            i18nKey="skills.daysICode"
+            components={{
+              highlight: <Text component="span" className="blue" inherit weight={700} />
+            }}
+          />
         </Title>
       </Group>
       <Group position="center">

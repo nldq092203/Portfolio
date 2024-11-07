@@ -1,17 +1,18 @@
 import React, { useRef } from 'react';
 import { Text, Container, Group, Paper, useMantineTheme } from '@mantine/core';
 import { motion, useInView } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 function MovienightDiagram() {
   const theme = useMantineTheme();
+  const { t } = useTranslation();
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-50px' }); // Triggers once when 50px above the element is in view
+  const isInView = useInView(ref, { once: true, margin: '-50px' });
 
-  // Define animation variants for smoother animations
   const containerVariants = {
     show: {
       transition: {
-        staggerChildren: 0.2, // Controls the delay between the appearance of each child
+        staggerChildren: 0.2,
       },
     },
   };
@@ -22,11 +23,20 @@ function MovienightDiagram() {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.6, // Adjust for smoother animation
-        ease: [0.25, 0.1, 0.25, 1], // Custom easing for smooth movement
+        duration: 0.6,
+        ease: [0.25, 0.1, 0.25, 1],
       },
     },
   };
+
+  const items = [
+    { color: '#66c2ff', icon: '🔍', position: { top: '10%', left: '45%' } },
+    { color: '#a569bd', icon: '📅', position: { top: '25%', right: '-30%' } },
+    { color: '#f1c40f', icon: '👤', position: { bottom: '45%', right: '-25%' } },
+    { color: '#ff7675', icon: '⏰', position: { bottom: '30%', left: '45%' } },
+    { color: '#55efc4', icon: '🔔', position: { bottom: '45%', left: '-20%' }, lignInverse: true },
+    { color: '#6c5ce7', icon: '💬', position: { top: '25%', left: '-20%' }, lignInverse: true },
+  ];
 
   return (
     <Paper
@@ -37,7 +47,7 @@ function MovienightDiagram() {
       ref={ref}
     >
       <Text fw={700} align="center" style={{ fontSize: "40px" }}>
-        Objective
+        {t("movienightDiagram.objective")}
       </Text>
 
       <Container style={{ position: 'relative', width: 550, height: 800 }}>
@@ -71,14 +81,7 @@ function MovienightDiagram() {
           variants={containerVariants}
           style={{ position: 'relative', width: '100%', height: '100%' }}
         >
-          {[
-            { label: '01. Movie Search', top: '10%', left: '45%', color: '#66c2ff', icon: '🔍', lignInverse: false },
-            { label: '02. Event Creation', top: '25%', right: '-20%', color: '#a569bd', icon: '📅', lignInverse: false },
-            { label: '03. Profile Management', bottom: '45%', right: '-30%', color: '#f1c40f', icon: '👤', lignInverse: false },
-            { label: '04. Scheduling', bottom: '30%', left: '45%', color: '#ff7675', icon: '⏰', lignInverse: false },
-            { label: '05. Notifications', bottom: '45%', left: '-20%', color: '#55efc4', icon: '🔔', lignInverse: true },
-            { label: '06. Communication', top: '25%', left: '-20%', color: '#6c5ce7', icon: '💬', lignInverse: true },
-          ].map((item, index) => (
+          {items.map((item, index) => (
             <motion.div
               key={index}
               variants={itemVariants}
@@ -86,16 +89,15 @@ function MovienightDiagram() {
                 scale: 1.1,
                 boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.2)',
                 transition: {
-                  duration: 0.4, // Adjust hover animation duration
-                  ease: 'easeInOut', // Smooth easing
-                  repeatType: 'reverse', // Reverses back to original state when hovering stops
+                  duration: 0.4,
+                  ease: 'easeInOut',
                 },
               }}
               style={{
                 position: 'absolute',
-                ...item,
+                ...item.position,
                 transform: 'translateX(-50%)',
-                cursor: 'pointer', // Indicate interactiveness
+                cursor: 'pointer',
               }}
             >
               <Group spacing="xs" style={{ flexDirection: item.lignInverse ? 'row-reverse' : 'row' }}>
@@ -114,7 +116,9 @@ function MovienightDiagram() {
                 >
                   <Text size="xl">{item.icon}</Text>
                 </Paper>
-                <Text fw={700} size="xl">{item.label.split('.')[1]}</Text>
+                <Text fw={700} size="xl">
+                  {t(`movienightDiagram.items.${index}`)}
+                </Text>
               </Group>
             </motion.div>
           ))}

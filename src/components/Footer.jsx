@@ -2,15 +2,15 @@ import React from "react";
 import { Container, Grid, Text, Group, Anchor } from "@mantine/core";
 import { AiFillGithub} from "react-icons/ai";
 import { FaLinkedinIn, FaEnvelope } from "react-icons/fa";
-
+import { useTranslation } from 'react-i18next';
 function Footer() {
   const year = new Date().getFullYear();
-
+  const { t } = useTranslation();
   return (
     <Container fluid py="md" className="footer" style={{ backgroundColor: "#333", color: "white" }}>
       <Grid justify="center" align="center">
         <Grid.Col span={4} style={{ textAlign: "center" }}>
-          <Text size="lg" weight={500}>Developed by Quynh Nguyen</Text>
+          <Text size="lg" weight={500}>{t('footer.developedBy')}</Text>
         </Grid.Col>
         <Grid.Col span={4} style={{ textAlign: "center" }}>
           <Group spacing="md" position="center" className="footer-icons">

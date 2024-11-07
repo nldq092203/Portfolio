@@ -4,8 +4,10 @@ import React, { useEffect, useState } from 'react';
 import poster from "../../../assets/posterVaukazimut.png";
 import { FaReact, FaPython } from 'react-icons/fa';
 import { SiDjango, SiPostgresql, SiTailwindcss, SiPostman } from 'react-icons/si';
+import { useTranslation } from 'react-i18next';
 
 function VaukazimutDetail() {
+  const { t } = useTranslation();
   const techStack = [
     { name: 'Python', icon: <FaPython size={50} color="#0A9EDC" /> },
     { name: 'Django', icon: <SiDjango size={50} color="#3CB043" /> },
@@ -55,7 +57,7 @@ function VaukazimutDetail() {
       {/* Tech Stack Section */}
       <Paper shadow="md" radius="md" p="md" className="project-card-view" style={{ margin: '50px auto', maxWidth: '900px', paddingBottom: "50px" }}>
         <Text fw={700} align="center" style={{ fontSize: "40px", marginBottom: "50px" }}>
-          Tech Stack Used
+        {t("vaukazimutDetail.techStack")}
         </Text>
         <SimpleGrid cols={2} spacing="xl">
           {techStack.map((tool, index) => (

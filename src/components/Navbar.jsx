@@ -17,8 +17,20 @@ import {
   Title
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
+import { useTranslation } from 'react-i18next';
+import ReactCountryFlag from "react-country-flag";
 
 function NavBar() {
+
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = (lang) => {
+    i18n.changeLanguage(lang);
+  };
+
+  const currentLanguage = i18n.language;
+  const languageToDisplay = currentLanguage === 'en' ? 'fr' : 'en';
+
   const [navColour, setNavColour] = useState(false);
   const [opened, { toggle }] = useDisclosure(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -57,7 +69,7 @@ function NavBar() {
 
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", width: "100%" }}>
           <Link to="/" className="d-flex">
-            <Title style={{ margin: 0, color: "#0197f6", fontSize: "2rem"}} >My Portfolio</Title>
+            <Title style={{ margin: 0, color: "#0197f6", fontSize: "2rem"}} >{t('navbar.title')}</Title>
           </Link>
           <Group position="apart" align="center">
             {isMobile ? (
@@ -78,29 +90,23 @@ function NavBar() {
                       <Group direction="column" spacing="md" style={{ padding: 20 }}>
                         <Button variant="subtle" onClick={toggle}>
                           <AiOutlineHome style={{ marginRight: "8px" }} />
-                          <Link to="/" style={{ textDecoration: "none", color: "dodgerblue" }}>Home</Link>
+                          <Link to="/" style={{ textDecoration: "none", color: "dodgerblue" }}>{t('navbar.home')}</Link>
                         </Button>
                         <Button variant="subtle" onClick={toggle}>
                           <AiOutlineUser style={{ marginRight: "8px" }} />
-                          <Link to="/skills" style={{ textDecoration: "none", color: "dodgerblue" }}>Skills</Link>
+                          <Link to="/skills" style={{ textDecoration: "none", color: "dodgerblue" }}>{t('navbar.skills')}</Link>
                         </Button>
                         <Button variant="subtle" onClick={toggle}>
                           <AiOutlineFundProjectionScreen style={{ marginRight: "8px" }} />
-                          <Link to="/project" style={{ textDecoration: "none", color: "dodgerblue" }}>Projects</Link>
+                          <Link to="/project" style={{ textDecoration: "none", color: "dodgerblue" }}>{t('navbar.projects')}</Link>
                         </Button>
                         <Button variant="subtle" onClick={toggle}>
                           <CgFileDocument style={{ marginRight: "8px" }} />
-                          <Link to="/resume" style={{ textDecoration: "none", color: "dodgerblue" }}>Resume</Link>
-                        </Button>
-                        <Button variant="subtle" onClick={toggle}>
-                          <ImBlog style={{ marginRight: "8px" }} />
-                          <a href="" target="_blank" rel="noreferrer" style={{ textDecoration: "none", color: "dodgerblue" }}>
-                            Blogs
-                          </a>
+                          <Link to="/resume" style={{ textDecoration: "none", color: "dodgerblue" }}>{t('navbar.resume')}</Link>
                         </Button>
                         <Button onClick={toggle}>
                           <CgGitFork style={{ marginRight: "8px" }} />
-                          <a href="" target="_blank" rel="noreferrer" style={{ textDecoration: "none", color: "dodgerblue" }}>
+                          <a href="https://github.com/nldq092203/Portfolio.git" target="_blank" rel="noreferrer" style={{ textDecoration: "none", color: "dodgerblue" }}>
                             <AiFillStar style={{ marginLeft: "8px" }} />
                           </a>
                         </Button>
@@ -119,7 +125,7 @@ function NavBar() {
                     style={{ fontSize: "1.1rem", padding: "10px 15px", color:"#FFFFFF"}}
                     fullWidth
                   >
-                    Home
+                    {t('navbar.home')}
                   </Button>
                 </Link>
                 <Link to="/skills" style={{ textDecoration: "none"}}>
@@ -130,7 +136,7 @@ function NavBar() {
                     style={{ fontSize: "1.1rem", padding: "10px 15px", color:"#FFFFFF"}}
                     fullWidth
                   >
-                    Skills
+                    {t('navbar.skills')}
                   </Button>
                 </Link>
                 <Link to="/project" style={{ textDecoration: "none"}}>
@@ -141,7 +147,7 @@ function NavBar() {
                     style={{ fontSize: "1.1rem", padding: "10px 15px",  color: "#FFFFFF" }}
                     fullWidth
                   >
-                    Projects
+                    {t('navbar.projects')}
                   </Button>
                 </Link>
 
@@ -153,7 +159,7 @@ function NavBar() {
                     style={{ fontSize: "1.1rem", padding: "10px 15px",  color: "#FFFFFF"  }}
                     fullWidth
                   >
-                    Resume
+                    {t('navbar.resume')}
                   </Button>
                 </Link>
 
@@ -166,9 +172,25 @@ function NavBar() {
                     style={{ fontSize: "1.1rem", padding: "10px 15px", color: "#FFFFFF" }}
                     fullWidth
                   >
-                    GitHub
+                    {t('navbar.github')}
                   </Button>
                 </a>
+
+                {/* Language switch button with UK and France flags */}
+                <Button
+                  onClick={() => changeLanguage(languageToDisplay)}
+                  variant="subtle"
+                  style={{ fontSize: "1.1rem", padding: "8px 15px", color: "#FFFFFF" }}
+                  leftSection={
+                    languageToDisplay === 'en' ? (
+                      <ReactCountryFlag countryCode="GB" svg style={{ width: "1.5em", height: "1.5em" }} />
+                    ) : (
+                      <ReactCountryFlag countryCode="FR" svg style={{ width: "1.5em", height: "1.5em" }} />
+                    )
+                  }
+                >
+                  {languageToDisplay === 'en' ? 'English' : 'Français'}
+                </Button>
               </Group>
             )}
           </Group>

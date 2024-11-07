@@ -18,6 +18,7 @@ import {
 import "./style.css";
 import "./App.css";
 import { MantineProvider } from '@mantine/core';
+import './i18n/i18n';
 
 function App() {
   const [load, upadateLoad] = useState(true);

@@ -3,11 +3,12 @@ import { Card, Text, Button, Group, Tooltip } from "@mantine/core";
 import { FaGithub } from "react-icons/fa";
 import { CgWebsite } from "react-icons/cg";
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 function ProjectCards(props) {
   const navigate = useNavigate();
   const [hovered, setHovered] = useState(false);
-
+  const { t } = useTranslation();
   const handleCardClick = () => {
     if (props.detailLink) {
       navigate(props.detailLink);
@@ -68,7 +69,7 @@ function ProjectCards(props) {
             color="blue"
             size="lg"
           >
-            Detail
+            {t("projectCard.detail")}
           </Button>
         )}
       </div>

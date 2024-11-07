@@ -4,6 +4,7 @@ import { FaDocker, FaReact, FaPython, FaGoogle, FaNodeJs } from 'react-icons/fa'
 import { SiDjango, SiPostgresql, SiCelery, SiRedis, SiFirebase, SiTailwindcss, SiPostman, SiPytest } from 'react-icons/si';
 import MovienightDescription from './MovienightDescription';
 import MovienightDiagram from './MovienightDiagram';
+import { useTranslation } from 'react-i18next';
 
 function MovienightDetail() {
   const techStack = [
@@ -23,7 +24,7 @@ function MovienightDetail() {
     { name: 'Postman', icon: <SiPostman size={50} color="#FF6C37" /> },
     { name: 'Google Cloud', icon: <FaGoogle size={50} color="#4285F4" /> },
   ];
-
+  const { t } = useTranslation();
   return (
     <Container fluid className="project-section" style={{ position: "relative" }}>
       {/* Video Section */}
@@ -54,7 +55,7 @@ function MovienightDetail() {
             color: 'white'
         }}
       >
-        View Project
+        {t("movienightDetail.viewProject")}
       </a>
       {/* Diagram Section */}
       <Paper shadow="md" className="project-section" align="center" radius="md">
@@ -81,7 +82,7 @@ function MovienightDetail() {
       {/* Tech Stack Section */}
       <Paper shadow="md" radius="md" p="md" className="project-card-view" style={{ margin: '40px auto', maxWidth: '1000px' }}>
         <Text fw={700} align="center" style={{ fontSize: "40px", marginBottom:"50px" }}>
-          Tech Stack Used
+          {t("movienightDetail.techStack")}
         </Text>
         <SimpleGrid cols={2} spacing="xl">
           {techStack.map((tool, index) => (

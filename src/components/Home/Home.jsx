@@ -4,8 +4,10 @@ import { IconHandStop} from "@tabler/icons-react";
 import Particle from "../Particle";
 import Type from "./Type";
 import Home2 from "./Home2";
+import { useTranslation } from 'react-i18next';
 
 function Home() {
+  const { t } = useTranslation();
   return (
     <section>
       <Container fluid style={{ padding: 0 }} className="home-section" id="home">
@@ -14,14 +16,14 @@ function Home() {
           <Grid>
             <Grid.Col span={7} className="home-header">
               <Title order={1} style={{ paddingBottom: 15 }} className="heading">
-                Hi There!{" "}
+                {t('home.greeting')}{" "}
                 <span className="wave" role="img" aria-labelledby="wave">
                   <IconHandStop size={30} /> 
                 </span>
               </Title>
 
               <Title order={2} className="heading-name">
-                I'M <strong className="main-name"> Quynh</strong>
+                {t('home.introduction')} <strong className="main-name"> {t('home.name')}</strong>
               </Title>
 
               <div style={{ padding: 50, textAlign: "left" }}>

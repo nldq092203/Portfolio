@@ -1,0 +1,181 @@
+{
+  "navbar": {
+    "title": "Mon Portfolio",
+    "home": "Accueil",
+    "skills": "Compétences",
+    "projects": "Projets",
+    "resume": "CV",
+    "github": "GitHub"
+  },
+  "home": {
+    "greeting": "Bonjour!",
+    "introduction": "Je suis",
+    "name": "Quynh"
+  },
+  "typewriter": {
+    "engineeringStudent": "Étudiante en ingénierie",
+    "webDeveloper": "Développeur Web",
+    "fullStackDeveloper": "Développeur Full-stack",
+    "opportunitiesSeeker": "Chercheur d'opportunités"
+  },
+  "home2": {
+    "title": "PERMETTEZ-MOI DE ME <highlight>PRÉSENTER</highlight>",
+    "introduction": "Je suis <strong>NGUYEN Le Diem Quynh</strong> du <strong>Vietnam</strong>. Je suis actuellement en 4ème année d'ingénierie à l'INSA Centre Val de Loire, France.",
+    "description": "Je me décrirais comme <strong>motivée</strong>, <strong>curieuse</strong> et <strong>méticuleuse</strong> - j'aime relever de nouveaux défis et apprendre en cours de route !",
+    "passion": "Je suis tombée amoureuse du monde du <strong>développement web et logiciel</strong> et j'ai acquis une solide base en <strong>développement full-stack</strong>.",
+    "skills": "Mon expertise inclut <text>Python (Django, Django Rest Framework, ...), SQL (PostgreSQL, MySQL), et JavaScript (ReactJS)</text>.",
+    "interests": "Mes intérêts résident dans <strong>l'optimisation des flux de données</strong> et <strong>l'amélioration de l'interactivité</strong>, tout en explorant des <strong>algorithmes avancés</strong> pour renforcer le développement backend.",
+    "goals": "Je suis passionnée par le <strong>développement d'API</strong>, la <strong>gestion de bases de données</strong> et les <strong>systèmes en temps réel</strong>, ainsi que par la maîtrise de chaque couche de la pile logicielle pour créer des applications performantes et fluides.",
+    "ambition": "Forte des connaissances et compétences acquises, je suis impatiente de trouver une opportunité où je pourrai appliquer ce que j'ai appris, continuer à développer mon expertise et apporter de la valeur dans un environnement qui favorise l'innovation et la communication efficace.",
+    "socialTitle": "RETROUVEZ-MOI SUR",
+    "socialMessage": "N'hésitez pas à <highlight>vous connecter</highlight> avec moi"
+  },
+  "footer": {
+    "developedBy": "Développé par Quynh Nguyen"
+  },
+  "skills": {
+    "title": "Que puis-je faire ?",
+    "daysICode": "Jours où je <highlight>code</highlight>"
+  },
+  "projects": {
+    "title": "Mes Travaux Récents",
+    "subtitle": "Voici quelques projets sur lesquels j'ai travaillé récemment.",
+    "projectCards": [
+      {
+        "title": "Movie Night",
+        "subtitle": "Projet Personnel",
+        "description": "Une application web full-stack conçue comme une plateforme sociale pour simplifier l'organisation de soirées cinéma."
+      },
+      {
+        "title": "Vaukazimut",
+        "subtitle": "Projet Universitaire",
+        "description": "Une application mobile conçue pour soutenir la gestion et l'organisation des sports d'orientation à l'Université INSA."
+      },
+      {
+        "title": "Jeu d'Évolution",
+        "subtitle": "Projet Universitaire",
+        "description": "Une simulation de jeu d'évolution multijoueur combinant des éléments de stratégie, de simulation et d'interaction en temps réel ou au tour par tour entre les joueurs."
+      }
+    ]
+  },
+  "projectCard": {
+    "detail": "Détail"
+  },
+  "movienightDescription": {
+    "title": "Chemin de Workflow de Projet",
+    "tasks": [
+      {
+        "label": "Construction de la BD",
+        "action": [
+          "Concevez et construisez le schéma de la base de données en utilisant PostgreSQL.",
+          "Créez des tables, des relations et des index pour un accès aux données optimisé.",
+          "Assurez l'intégrité des données et la normalisation pour maintenir l'efficacité et la fiabilité."
+        ]
+      },
+      {
+        "label": "Division en Applications",
+        "action": [
+          "Organisez le projet en applications modulaires pour une meilleure gestion du code.",
+          "Les applications incluent :"
+        ],
+        "subActions": [
+          "Auth : Authentification et gestion des utilisateurs.",
+          "Film : Gestion des données et interactions des films.",
+          "Profil : Fonctionnalités de personnalisation des utilisateurs.",
+          "Notification : Gestion et envoi des notifications.",
+          "Chat : Fonctionnalités de messagerie en temps réel."
+        ]
+      },
+      {
+        "label": "Authentification",
+        "action": "Implémentez une authentification sécurisée en utilisant :",
+        "subActions": [
+          "JWT (JSON Web Tokens) pour une authentification basée sur des jetons.",
+          "Google OAuth2 pour des options de connexion tierces."
+        ]
+      },
+      {
+        "label": "Gestion des Films",
+        "action": [
+          "Intégrez l'API OMDB pour récupérer et afficher les données de films.",
+          "Permettez aux utilisateurs de rechercher et de voir les détails des films.",
+          "Utilisez les tâches Celery pour le traitement en arrière-plan et les mises à jour de données.",
+          "Organisez des événements liés aux films (soirée cinéma, invitation)."
+        ]
+      },
+      {
+        "label": "Profil",
+        "action": [
+          "Permettre aux utilisateurs de personnaliser et de gérer leurs profils.",
+          "Prise en charge de la mise à jour des informations personnelles et de l'avatar."
+        ]
+      },
+      {
+        "label": "Notifications",
+        "action": [
+          "Implémentez un système de notifications en utilisant Celery pour les tâches asynchrones.",
+          "Envoyez des alertes programmées pour informer les utilisateurs."
+        ]
+      },
+      {
+        "label": "Chat",
+        "action": [
+          "Développez une fonctionnalité de chat en temps réel utilisant les WebSockets.",
+          "Intégrez Ably pour une messagerie en temps réel transparente.",
+          "Utilisez les webhooks pour la gestion des événements et Firebase pour le stockage et l'archivage des fichiers."
+        ]
+      },
+      {
+        "label": "Tests",
+        "action": [
+          "Assurez la qualité du code avec des tests complets en utilisant Pytest.",
+          "Couvrez les tests unitaires et d'intégration pour les modèles, API et intégrations.",
+          "Identifiez et corrigez les problèmes potentiels tôt pour maintenir la stabilité."
+        ]
+      },
+      {
+        "label": "CI/CD",
+        "action": [
+          "Configurez l'intégration continue (CI) avec GitHub Actions pour exécuter les tests.",
+          "Utilisez Docker pour la containerisation afin de simplifier le développement et le déploiement."
+        ]
+      },
+      {
+        "label": "Autres Fonctionnalités",
+        "action": "Ajoutez la prise en charge de :",
+        "subActions": [
+          "CORS (Cross-Origin Resource Sharing) pour un accès API sécurisé.",
+          "Limitation des requêtes pour gérer le trafic et éviter la surcharge.",
+          "SwaggerUI pour une documentation API complète.",
+          "TypeScript pour une meilleure maintenabilité du code et sécurité de type."
+        ]
+      }
+    ]
+  },
+  "movienightDiagram": {
+    "objective": "Objectif",
+    "items": [
+      "Recherche de films",
+      "Création d'événements",
+      "Gestion de profil",
+      "Planification",
+      "Notifications",
+      "Communication"
+    ]
+  },
+  "movienightDetail": {
+    "techStack": "Technologies Utilisées",
+    "viewProject": "Voir le projet"
+  },
+  "vaukazimutDetail":{
+    "techStack":"Technologies Utilisées"
+  },
+  "imageViewer": {
+    "previous":"Précédent",
+    "next": "Suivant",
+    "of": "sur"
+  },
+  "resume": {
+    "download": "Télécharger le CV"
+  }
+}

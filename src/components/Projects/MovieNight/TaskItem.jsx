@@ -3,13 +3,16 @@ import { useDisclosure } from '@mantine/hooks';
 import { Popover, Button, Modal, Image, Tooltip } from '@mantine/core';
 import { motion } from 'framer-motion';
 import UML from '../../../assets/movienight-uml.drawio.png'
+import { useTranslation } from 'react-i18next';
+
 function TaskItem({ task, index }) {
   const [opened, { close, open }] = useDisclosure(false);
   const [modalOpened, setModalOpened] = useState(false);
+  const { t } = useTranslation();
 
   const handleTaskClick = () => {
     // Open the modal only if the label is "Database Construction"
-    if (task.label === 'Database Construction') {
+    if (task.label === t("movienightDescription.tasks.0.label")) {
       setModalOpened(true);
     }
   };
@@ -32,7 +35,7 @@ function TaskItem({ task, index }) {
           <Popover.Target>
             <Tooltip
               label="Click to view UML diagram"
-              disabled={task.label !== 'Database Construction'}
+              disabled={task.label !== t("movienightDescription.tasks.0.label")}
               position="bottom"
               withArrow
             >
