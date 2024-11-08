@@ -21,11 +21,11 @@
   "home2": {
     "title": "PERMETTEZ-MOI DE ME <highlight>PRÉSENTER</highlight>",
     "introduction": "Je suis <strong>NGUYEN Le Diem Quynh</strong> du <strong>Vietnam</strong>. Je suis actuellement en 4ème année d'ingénierie à l'INSA Centre Val de Loire, France.",
-    "description": "Je me décrirais comme <strong>motivée</strong>, <strong>curieuse</strong> et <strong>méticuleuse</strong> - j'aime relever de nouveaux défis et apprendre en cours de route !",
-    "passion": "Je suis tombée amoureuse du monde du <strong>développement web et logiciel</strong> et j'ai acquis une solide base en <strong>développement full-stack</strong>.",
+    "description": "Je me décrirais comme une personne <strong>motivée</strong>, <strong>curieuse</strong> et <strong>méticuleuse</strong> - j'aime relever de nouveaux défis et apprendre en cours de route !",
+    "passion": "Je suis passionnée par le monde du <strong>développement web et logiciel</strong> et j'ai acquis une solide base en <strong>développement full-stack</strong>.",
     "skills": "Mon expertise inclut <text>Python (Django, Django Rest Framework, ...), SQL (PostgreSQL, MySQL), et JavaScript (ReactJS)</text>.",
     "interests": "Mes intérêts résident dans <strong>l'optimisation des flux de données</strong> et <strong>l'amélioration de l'interactivité</strong>, tout en explorant des <strong>algorithmes avancés</strong> pour renforcer le développement backend.",
-    "goals": "Je suis passionnée par le <strong>développement d'API</strong>, la <strong>gestion de bases de données</strong> et les <strong>systèmes en temps réel</strong>, ainsi que par la maîtrise de chaque couche de la pile logicielle pour créer des applications performantes et fluides.",
+    "goals": "Je suis particulièrement intéressée par le <strong>développement d'API</strong>, la <strong>gestion de bases de données</strong> et les <strong>systèmes en temps réel</strong>, ainsi que par la maîtrise de chaque couche de la pile logicielle pour créer des applications performantes et fluides.",
     "ambition": "Forte des connaissances et compétences acquises, je suis impatiente de trouver une opportunité où je pourrai appliquer ce que j'ai appris, continuer à développer mon expertise et apporter de la valeur dans un environnement qui favorise l'innovation et la communication efficace.",
     "socialTitle": "RETROUVEZ-MOI SUR",
     "socialMessage": "N'hésitez pas à <highlight>me connecter</highlight>"
