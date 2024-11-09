@@ -67,15 +67,15 @@
       {
         "label": "Construction de la BD",
         "action": [
-          "Concevez et construisez le schéma de la base de données en utilisant PostgreSQL.",
-          "Créez des tables, des relations et des index pour un accès aux données optimisé.",
-          "Assurez l'intégrité des données et la normalisation pour maintenir l'efficacité et la fiabilité."
+          "Concevoir et construire le schéma de la base de données en utilisant PostgreSQL.",
+          "Créer des tables, des relations et des index pour un accès aux données optimisé.",
+          "Assurer l'intégrité des données et la normalisation pour maintenir l'efficacité et la fiabilité."
         ]
       },
       {
         "label": "Division en Applications",
         "action": [
-          "Organisez le projet en applications modulaires pour une meilleure gestion du code.",
+          "Organiser le projet en applications modulaires pour une meilleure gestion du code.",
           "Les applications incluent :"
         ],
         "subActions": [
@@ -88,7 +88,7 @@
       },
       {
         "label": "Authentification",
-        "action": "Implémentez une authentification sécurisée en utilisant :",
+        "action": "Implémenter une authentification sécurisée en utilisant :",
         "subActions": [
           "JWT (JSON Web Tokens) pour une authentification basée sur des jetons.",
           "Google OAuth2 pour des options de connexion tierces."
@@ -97,52 +97,52 @@
       {
         "label": "Gestion des Films",
         "action": [
-          "Intégrez l'API OMDB pour récupérer et afficher les données de films.",
-          "Permettez aux utilisateurs de rechercher et de voir les détails des films.",
-          "Utilisez les tâches Celery pour le traitement en arrière-plan et les mises à jour de données.",
-          "Organisez des événements liés aux films (soirée cinéma, invitation)."
+          "Intégrer l'API OMDB pour récupérer et afficher les données de films.",
+          "Permettre aux utilisateurs de rechercher et de voir les détails des films.",
+          "Utiliser les tâches Celery pour le traitement en arrière-plan et les mises à jour de données.",
+          "Organiser des événements liés aux films (soirée cinéma, invitation)."
         ]
       },
       {
         "label": "Profil",
         "action": [
           "Permettre aux utilisateurs de personnaliser et de gérer leurs profils.",
-          "Prise en charge de la mise à jour des informations personnelles et de l'avatar."
+          "Permettre de mettre à jour des informations personnelles et de l'avatar."
         ]
       },
       {
         "label": "Notifications",
         "action": [
-          "Implémentez un système de notifications en utilisant Celery pour les tâches asynchrones.",
-          "Envoyez des alertes programmées pour informer les utilisateurs."
+          "Implémenter un système de notifications en utilisant Celery pour les tâches asynchrones.",
+          "Envoyer des alertes programmées pour informer les utilisateurs."
         ]
       },
       {
         "label": "Chat",
         "action": [
-          "Développez une fonctionnalité de chat en temps réel utilisant les WebSockets.",
-          "Intégrez Ably pour une messagerie en temps réel transparente.",
-          "Utilisez les webhooks pour la gestion des événements et Firebase pour le stockage et l'archivage des fichiers."
+          "Développer une fonctionnalité de chat en temps réel utilisant les WebSockets.",
+          "Intégrer Ably pour une messagerie en temps réel transparente.",
+          "Utiliser les webhooks pour la gestion des événements et Firebase pour le stockage et l'archivage des fichiers."
         ]
       },
       {
         "label": "Tests",
         "action": [
-          "Assurez la qualité du code avec des tests complets en utilisant Pytest.",
-          "Couvrez les tests unitaires et d'intégration pour les modèles, API et intégrations.",
-          "Identifiez et corrigez les problèmes potentiels tôt pour maintenir la stabilité."
+          "Assurer la qualité du code avec des tests complets en utilisant Pytest.",
+          "Couvrir les tests unitaires et d'intégration pour les modèles, API et intégrations.",
+          "Identifier et corrigez les problèmes potentiels tôt pour maintenir la stabilité."
         ]
       },
       {
         "label": "CI/CD",
         "action": [
-          "Configurez l'intégration continue (CI) avec GitHub Actions pour exécuter les tests.",
-          "Utilisez Docker pour la containerisation afin de simplifier le développement et le déploiement."
+          "Configurer l'intégration continue (CI) avec GitHub Actions pour exécuter les tests.",
+          "Utiliser Docker pour la containerisation afin de simplifier le développement et le déploiement."
         ]
       },
       {
         "label": "Autres Fonctionnalités",
-        "action": "Ajoutez la prise en charge de :",
+        "action": "Ajouter la prise en charge de :",
         "subActions": [
           "CORS (Cross-Origin Resource Sharing) pour un accès API sécurisé.",
           "Limitation des requêtes pour gérer le trafic et éviter la surcharge.",
