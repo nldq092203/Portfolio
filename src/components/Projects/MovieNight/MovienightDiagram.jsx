@@ -71,7 +71,7 @@ function MovienightDiagram() {
           }}
         >
           <Text size="xl" fw={700} className="white" align="center">
-            Centralized Platform for Movie
+            {t("movienightDiagram.title")}
           </Text>
         </Paper>
 

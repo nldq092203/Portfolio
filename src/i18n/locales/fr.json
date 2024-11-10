@@ -154,6 +154,7 @@
   },
   "movienightDiagram": {
     "objective": "Objectif",
+    "title": "Plateforme Centralisée pour le Cinéma", 
     "items": [
       "Recherche de films",
       "Création d'événements",

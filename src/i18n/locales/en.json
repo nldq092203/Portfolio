@@ -154,6 +154,7 @@
   },
   "movienightDiagram": {
     "objective": "Objective",
+    "title":"Centralized Platform for Movie", 
     "items": [
       "Movie Search",
       "Event Creation",
