@@ -156,7 +156,6 @@
         "subActions": [
           "CORS (Cross-Origin Resource Sharing) for secure API access.",
           "Request throttling to manage traffic and prevent overuse.",
-          "SwaggerUI for comprehensive API documentation.",
           "TypeScript for better code maintainability and type safety."
         ]
       }
