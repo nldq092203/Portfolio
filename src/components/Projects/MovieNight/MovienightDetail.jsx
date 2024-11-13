@@ -22,6 +22,7 @@ function MovienightDetail() {
     { name: 'Mantine', icon: <FaNodeJs size={50} color="#339933" /> },
     { name: 'TailwindCSS', icon: <SiTailwindcss size={50} color="#38B2AC" /> },
     { name: 'Postman', icon: <SiPostman size={50} color="#FF6C37" /> },
+    { name: 'SwaggerUI', icon: <Button size="xs" color="green" variant="light">SwaggerUI</Button> },
     { name: 'Google Cloud', icon: <FaGoogle size={50} color="#4285F4" /> },
   ];
   const { t } = useTranslation();
@@ -72,7 +73,7 @@ function MovienightDetail() {
           maxWidth: '900px',
           display: 'flex',
           justifyContent: 'center',
-          alignItems: 'center',
+          align: 'center',
           margin: '0 auto',
         }}
       >
@@ -86,7 +87,7 @@ function MovienightDetail() {
         </Text>
         <SimpleGrid cols={2} spacing="xl">
           {techStack.map((tool, index) => (
-            <Box key={index} display="flex" alignItems="center" p="md">
+            <Box key={index} display="flex" align="center" p="md">
               {tool.icon}
               <Text ml="xl" size="xl">{tool.name}</Text>
             </Box>

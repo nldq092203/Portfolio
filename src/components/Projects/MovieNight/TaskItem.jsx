@@ -2,25 +2,30 @@ import React, { useState } from 'react';
 import { useDisclosure } from '@mantine/hooks';
 import { Popover, Button, Modal, Image, Tooltip } from '@mantine/core';
 import { motion } from 'framer-motion';
-import UML from '../../../assets/movienight-uml.drawio.png'
+import UML from '/movienight-uml.drawio.png';
+import SwaggerUI from '/swaggerUI.png'; 
 import { useTranslation } from 'react-i18next';
 
 function TaskItem({ task, index }) {
   const [opened, { close, open }] = useDisclosure(false);
   const [modalOpened, setModalOpened] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
   const { t } = useTranslation();
 
   const handleTaskClick = () => {
-    // Open the modal only if the label is "Database Construction"
     if (task.label === t("movienightDescription.tasks.0.label")) {
+      setSelectedImage(UML);
+      setModalOpened(true);
+    } else if (task.label === t("movienightDescription.tasks.9.label")) {
+      setSelectedImage(SwaggerUI);
       setModalOpened(true);
     }
   };
 
   return (
     <>
-      <Modal opened={modalOpened} fullScreen onClose={() => setModalOpened(false)} title="UML Diagram">
-        <Image src={UML} alt="UML Diagram" />
+      <Modal opened={modalOpened} fullScreen onClose={() => setModalOpened(false)} title={task.label}>
+        {selectedImage && <Image src={selectedImage} alt="Diagram" />}
       </Modal>
 
       <motion.div
@@ -34,8 +39,8 @@ function TaskItem({ task, index }) {
         <Popover width={300} position="top" withArrow shadow="md" opened={opened}>
           <Popover.Target>
             <Tooltip
-              label="Click to view UML diagram"
-              disabled={task.label !== t("movienightDescription.tasks.0.label")}
+              label="Click to view"
+              disabled={task.label !== t("movienightDescription.tasks.0.label") && task.label !== t("movienightDescription.tasks.9.label")}
               position="bottom"
               withArrow
             >

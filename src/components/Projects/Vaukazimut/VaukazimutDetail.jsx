@@ -1,7 +1,7 @@
 import { Container, Image, Paper, SimpleGrid, Box, Text } from '@mantine/core';
 import ImageViewer from './ImageViewer';
-import React, { useEffect, useState } from 'react';
-import poster from "../../../assets/posterVaukazimut.png";
+import React from 'react';
+import poster from "/posterVaukazimut.png";
 import { FaReact, FaPython } from 'react-icons/fa';
 import { SiDjango, SiPostgresql, SiTailwindcss, SiPostman } from 'react-icons/si';
 import { useTranslation } from 'react-i18next';
@@ -18,24 +18,26 @@ function VaukazimutDetail() {
     { name: 'Postman', icon: <SiPostman size={50} color="#FF6C37" /> },
   ];
 
-  const images = import.meta.glob('../../../assets/Vaukazimut/*.{png,jpg,jpeg,svg}');
-
-  const sortedImagePaths = Object.keys(images).sort((a, b) => {
-    const numA = parseInt(a.match(/(\d+)/)[0], 10);
-    const numB = parseInt(b.match(/(\d+)/)[0], 10);
-    return numA - numB;
-  });
-
-  const [imageUrls, setImageUrls] = useState([]);
-
-  useEffect(() => {
-    const loadImages = async () => {
-      const urls = await Promise.all(sortedImagePaths.map((path) => images[path]()));
-      setImageUrls(urls.map((mod) => mod.default));
-    };
-
-    loadImages();
-  }, []);
+  // Construct URLs manually since the images are in the public folder
+  const imageUrls = [
+    '/Vaukazimut/1.jpg',
+    '/Vaukazimut/2.jpg',
+    '/Vaukazimut/3.jpg',
+    '/Vaukazimut/4.jpg',
+    '/Vaukazimut/5.jpg',
+    '/Vaukazimut/6.jpg',
+    '/Vaukazimut/7.jpg',
+    '/Vaukazimut/8.jpg',
+    '/Vaukazimut/9.jpg',
+    '/Vaukazimut/10.jpg',
+    '/Vaukazimut/11.jpg',
+    '/Vaukazimut/12.jpg',
+    '/Vaukazimut/13.jpg',
+    '/Vaukazimut/14.jpg',
+    '/Vaukazimut/15.jpg',
+    '/Vaukazimut/17.jpg',
+    '/Vaukazimut/18.jpg',
+  ];
 
   return (
     <div style={{ backgroundColor: '#242424', minHeight: '100vh', paddingBottom: '50px' }}>
@@ -57,11 +59,11 @@ function VaukazimutDetail() {
       {/* Tech Stack Section */}
       <Paper shadow="md" radius="md" p="md" className="project-card-view" style={{ margin: '50px auto', maxWidth: '900px', paddingBottom: "50px" }}>
         <Text fw={700} align="center" style={{ fontSize: "40px", marginBottom: "50px" }}>
-        {t("vaukazimutDetail.techStack")}
+          {t("vaukazimutDetail.techStack")}
         </Text>
         <SimpleGrid cols={2} spacing="xl">
           {techStack.map((tool, index) => (
-            <Box key={index} style={{ display: 'flex', alignItems: 'center', padding: 'md' }}>
+            <Box key={index} style={{ display: 'flex', align: 'center', padding: 'md' }}>
               {tool.icon}
               <Text ml="xl" size="xl">{tool.name}</Text>
             </Box>

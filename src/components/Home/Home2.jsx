@@ -5,7 +5,6 @@ import {
   AiFillGithub,
 } from "react-icons/ai";
 import { FaLinkedinIn, FaEnvelope } from "react-icons/fa";
-import myImg from "../../assets/avatar.jpg";
 import { useTranslation, Trans } from "react-i18next";
 
 function Home2() {
@@ -23,7 +22,7 @@ function Home2() {
           </Grid.Col>
           <Grid.Col span={4} className="myAvtar">
             <Tilt>
-              <Image src={myImg} className="img-fluid" alt="avatar" fit="contain" radius="xl" />
+              <Image src="/avatar.jpg" className="img-fluid" alt="avatar" fit="contain" radius="xl" />
             </Tilt>
           </Grid.Col>
         </Grid>

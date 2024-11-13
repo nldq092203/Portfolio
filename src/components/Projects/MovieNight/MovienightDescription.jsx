@@ -13,6 +13,7 @@ import {
   MdNotifications,
   MdChat,
   MdIntegrationInstructions,
+  MdDescription
 } from 'react-icons/md';
 import TaskItem from './TaskItem';
 import { useTranslation } from 'react-i18next';
@@ -132,12 +133,23 @@ function MovienightDescription() {
     },
     {
       label: t("movienightDescription.tasks.9.label"),
+      icon: <MdDescription />,
+      action: (
+        <ul style={{ listStyleType: 'disc', paddingLeft: '20px', marginTop: '10px' }}>
+          {t("movienightDescription.tasks.9.action", { returnObjects: true }).map((item, i) => (
+            <li key={i}>{item}</li>
+          ))}
+        </ul>
+      ),
+    },
+    {
+      label: t("movienightDescription.tasks.10.label"),
       icon: <MdIntegrationInstructions />,
       action: (
         <p style={{ paddingLeft: '20px', marginTop: '10px' }}>
-          {t("movienightDescription.tasks.9.action")}
+          {t("movienightDescription.tasks.10.action")}
           <ol style={{ listStyleType: 'decimal', paddingLeft: '20px', marginTop: '10px' }}>
-            {t("movienightDescription.tasks.9.subActions", { returnObjects: true }).map((item, i) => (
+            {t("movienightDescription.tasks.10.subActions", { returnObjects: true }).map((item, i) => (
               <li key={i}>{item}</li>
             ))}
           </ol>
@@ -147,7 +159,7 @@ function MovienightDescription() {
   ];
 
   return (
-    <div ref={ref} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '50px' }}>
+    <div ref={ref} style={{ display: 'flex', flexDirection: 'column', align: 'center', marginTop: '50px' }}>
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}

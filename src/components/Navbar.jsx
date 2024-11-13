@@ -67,7 +67,7 @@ function NavBar() {
       }}
     >
 
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", width: "100%" }}>
+        <div style={{ display: "flex", justifyContent: "space-between", align: "center", width: "100%" }}>
           <Link to="/" className="d-flex">
             <Title style={{ margin: 0, color: "#0197f6", fontSize: "2rem"}} >{t('navbar.title')}</Title>
           </Link>

@@ -141,6 +141,16 @@
         ]
       },
       {
+        "label": "Documentation de l'API",
+        "action": [
+          "Configurer SwaggerUI.",
+          "Décrire les points de terminaison.",
+          "Lister les paramètres.",
+          "Détailler les réponses.",
+          "Donner un exemple de requête."
+        ]
+      },
+      {
         "label": "Autres Fonctionnalités",
         "action": "Ajouter la prise en charge de :",
         "subActions": [

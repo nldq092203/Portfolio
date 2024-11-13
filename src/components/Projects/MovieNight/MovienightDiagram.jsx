@@ -111,7 +111,7 @@ function MovienightDiagram() {
                     backgroundColor: item.color,
                     display: 'flex',
                     justifyContent: 'center',
-                    alignItems: 'center',
+                    align: 'center',
                     flexShrink: 0, // Keep the icon size fixed
                   }}
                 >

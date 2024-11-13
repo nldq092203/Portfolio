@@ -141,6 +141,16 @@
         ]
       },
       {
+        "label": "API Documentation",
+        "action": [
+          "Set up SwaggerUI.",
+          "Describe endpoints.",
+          "List parameters.",
+          "Detail responses.",
+          "Give example of request."
+        ]
+      },
+      {
         "label": "Other Features",
         "action": "Add support for:",
         "subActions": [
