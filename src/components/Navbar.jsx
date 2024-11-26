@@ -110,6 +110,13 @@ function NavBar() {
                             <AiFillStar style={{ marginLeft: "8px" }} />
                           </a>
                         </Button>
+                        <Button
+                          variant="subtle"
+                          fullWidth
+                          onClick={() => changeLanguage(languageToDisplay)}
+                        >
+                          {languageToDisplay === 'en' ? 'English' : 'Français'}
+                        </Button>
                       </Group>
                     </Paper>
                   )}
