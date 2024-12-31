@@ -1,5 +1,5 @@
-import cvEnglish from "/CV_en.jpg";
-import cvFrench from "/CV_fr.jpg";
+import cvEnglish from "/CV_en.png";
+import cvFrench from "/CV_fr.png";
 import { Container, Image, Button, Title } from "@mantine/core";
 import Particle from "../Particle";
 import { IconDownload } from '@tabler/icons-react';
